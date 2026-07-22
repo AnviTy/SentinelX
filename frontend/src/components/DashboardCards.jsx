@@ -1,28 +1,39 @@
+import { alerts } from "../data/alerts";
 function DashboardCards() {
+const critical = alerts.filter(
+  (alert) => alert.severity === "Critical"
+).length;
 
-    const stats = [
-        {
-            title: "Critical Alerts",
-            value: 12,
-            color: "text-red-500"
-        },
-        {
-            title: "High Alerts",
-            value: 27,
-            color: "text-orange-400"
-        },
-        {
-            title: "Medium Alerts",
-            value: 54,
-            color: "text-yellow-400"
-        },
-        {
-            title: "Healthy Agents",
-            value: 8,
-            color: "text-green-400"
-        }
-    ];
+const high = alerts.filter(
+  (alert) => alert.severity === "High"
+).length;
 
+const medium = alerts.filter(
+  (alert) => alert.severity === "Medium"
+).length;
+    
+const stats = [
+  {
+    title: "Critical Alerts",
+    value: critical,
+    color: "text-red-500",
+  },
+  {
+    title: "High Alerts",
+    value: high,
+    color: "text-orange-400",
+  },
+  {
+    title: "Medium Alerts",
+    value: medium,
+    color: "text-yellow-400",
+  },
+  {
+    title: "Healthy Agents",
+    value: 8,
+    color: "text-green-400",
+  },
+];
     return (
 
         <div className="grid grid-cols-4 gap-6 mt-10">
