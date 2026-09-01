@@ -1,5 +1,7 @@
+import AlertsTable from "../components/AlertsTable";
+
 function Alerts() {
-  return <h1 className="text-white text-4xl">Alerts</h1>;
+  return <AlertsTable />;
 }
 
 export default Alerts;

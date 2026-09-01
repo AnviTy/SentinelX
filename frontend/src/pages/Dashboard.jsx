@@ -3,19 +3,21 @@ import AlertsTable from "../components/AlertsTable";
 
 function Dashboard() {
   return (
-    <>
-      <h1 className="text-4xl font-bold text-white">
-        Welcome back, Analyst 👋
+    <div className="text-white">
+
+      <h1 className="text-4xl font-bold">
+        Dashboard
       </h1>
 
       <p className="text-slate-400 mt-2">
-        Cloud Hosted SOAR Platform
+        Security Operations Center
       </p>
 
       <DashboardCards />
 
       <AlertsTable />
-    </>
+
+    </div>
   );
 }
 
